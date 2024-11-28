@@ -1,5 +1,3 @@
-
-
 void main() {
   //add function
   List<int> marks = [];
@@ -51,4 +49,13 @@ void main() {
   //for each loop function
   List<double> decimal = [2.3, 4.4, 6.4];
   decimal.forEach((decimals) => print(decimals));
+  print("\n");
+
+  //first and last element
+  List<int> numb = [2, 3, 4, 5, 6];
+  int r=numb.first;
+  print(r);
+  print("\n");
+  int s=numb.last;
+  print(s);
 }
