@@ -1,5 +1,6 @@
-import 'dart:io';
 //import 'dart:math';
+
+import 'dart:io';
 
 void main() {
   /*
@@ -130,7 +131,7 @@ void main() {
   }
   print("The Answer of Base to the Raised Exponent number $Base and $Expo is $power_res");
 
-*/
+
   //user should enter enter the number how much number he wnat to sum
   print("Enter how many number that you want to sum:");
   int? enter_num = int.parse(stdin.readLineSync()!);
@@ -143,5 +144,73 @@ void main() {
 
   print("The sum of all the number is :$sum");
 
-  
+  //sum of all element in static list
+  List<int> int_value = [1, 3, 6, 8, 10];
+  int sum = 0;
+  for (int a = 0; a < int_value.length; a++) {
+    sum += int_value[a];
+  }
+  print("List :$int_value");
+  print(" Sum:$sum");
+
+
+  //user enter the value in a list and then print
+  print("Enter the positive value:");
+  int? value = int.parse(stdin.readLineSync()!);
+  List<int> list_num = [];
+   print("Enter $value value putt in list:");
+  for (int i = 0; i < value; i += 1) {
+
+    int? n = int.parse(stdin.readLineSync()!);
+    list_num.add(n);
+  }
+  print("The list Element is :$list_num");
+    
+
+  //same program but sum of the list
+  print("Enter the positive number:");
+  int? num = int.parse(stdin.readLineSync()!);
+  List<int> number = [];
+  print("Enter number $num");
+  int sum = 0;
+  for (int y = 0; y <= num; y++) {
+    int element = int.parse(stdin.readLineSync()!);
+    number.add(element);
+    sum += number[y];
+  }
+  print("The List: $number");
+  print("Sum :$sum");
+   
+
+  //same program but sum it and also find the sum of odd and even number is =sum
+  print("Enter the positive Number:");
+  int? num = int.parse(stdin.readLineSync()!);
+  List<int> a = [];
+  int sum = 0;
+  int sum_of_even = 0;
+  int sum_of_odd = 0;
+  print("Enter $num:");
+  for (int b = 0; b < num; b += 1) {
+    print("Enter the $a");
+    int ele = int.parse(stdin.readLineSync()!);
+    a.add(ele);
+    sum += a[b];
+    if (a[b] % 2 == 0) {
+      sum_of_even += a[b];
+    } else if (a[b] % 2 == 1) {
+      sum_of_odd += a[b];
+    }
+  }
+
+  print("List:$a");
+  print("Sum:$sum");
+  print("Sum of Even :$sum_of_even");
+  print("Sum of Odd:$sum_of_odd");
+
+  if (sum_of_even + sum_of_odd == sum) {
+    print("The sum of Even and odd is equal to the total sum...");
+  } else {
+    print("The sum of Even and odd is not equal to total sum...");
+  }
+   */
 }
