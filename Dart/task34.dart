@@ -1,4 +1,4 @@
-//Ask from user to enter the table number  and  find that number
+//Ask from user to enter the table number  and  find that number of table
 import 'dart:io';
 
 void table() {
