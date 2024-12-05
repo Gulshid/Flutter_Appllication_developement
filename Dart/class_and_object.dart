@@ -1,5 +1,12 @@
 import 'dart:io';
-
+                //what is class and object ?
+                //when we create a class this is object 
+                //In class we have to implemenet all the previous programming such as(basic variable,conditional
+                //satatement,loops,lsit,map,function in class)
+                //
+                //class Syntax:>
+                //class declaration ,name of class ,curly braket...
+                // 
 class A {
   void func() {
     print("***Class A ***");
