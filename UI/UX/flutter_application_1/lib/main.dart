@@ -27,8 +27,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          
           leading: Icon(Icons.arrow_back_ios),
-          title: Text('first app'),
+          title: Text('first app', style: TextStyle(
+            fontSize: 20,
+            color: Colors.white
+          ),),
           backgroundColor: Colors.teal,
           centerTitle: true,
           actions: [Icon(Icons.menu)],
