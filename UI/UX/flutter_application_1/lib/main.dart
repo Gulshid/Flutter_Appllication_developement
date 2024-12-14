@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,28 +15,27 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: HomePage());
+        home: Homepage());
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          
-          leading: Icon(Icons.arrow_back_ios),
-          title: Text('first app', style: TextStyle(
-            fontSize: 20,
-            color: Colors.white
-          ),),
-          backgroundColor: Colors.teal,
-          centerTitle: true,
-          actions: [Icon(Icons.menu)],
-        ),
-        body: Column(
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text('Hello World' ,style: TextStyle(fontSize: 30,color: Colors.purple, )),
+        centerTitle: true,
+        backgroundColor: Colors.cyan,
+        actions: [Icon(Icons.menu)],
+        leading: Icon(Icons.arrow_back_ios_new),
+
+
+      ),
+
+      body:Column(
           // mainAxisAlignment: MainAxisAlignment.,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -51,69 +49,9 @@ class HomePage extends StatelessWidget {
             Icon(Icons.favorite),
             Icon(Icons.favorite),
             Icon(Icons.favorite),
-            Row(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-                Icon(Icons.favorite),
-              ],
-            ),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            Icon(Icons.add),
-            SizedBox(height: 40),
-            Container(
-              width: 300,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.red,
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Icon(Icons.favorite), Text('fav')],
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.notification_important_sharp),
-                      Text('fav')
-                    ],
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.message,
-                        color: Colors.amber,
-                      ),
-                      Text(
-                        'fav',
-                        style: TextStyle(color: Colors.amber),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
-        ));
+          ]
+      ),
+    );
+    
   }
 }
