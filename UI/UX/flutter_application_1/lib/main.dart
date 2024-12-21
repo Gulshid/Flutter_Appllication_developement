@@ -1,37 +1,76 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Hello());
+  runApp(const MyApp());
 }
 
-class Hello extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Hello_World(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: Task2(),
+      //  Task1(),
     );
+
   }
 }
 
-class Hello_World extends StatelessWidget {
-  const Hello_World ({super.key});
+class Task2 extends StatelessWidget {
+  const Task2({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-           backgroundColor:  Color.fromARGB(255, 1, 26, 46),
-      title: Center(child: Text('Hello! FLutter...',style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
+    var scaffold = Scaffold(
+      backgroundColor: const Color.fromARGB(255, 230, 207, 198),
+      appBar: AppBar(
         
-        )
-      )),
-      leading: Icon(Icons.menu,color: Colors.white,),
-      
+        backgroundColor: const Color.fromARGB(255, 3, 72, 128),
+        
+        title: Center(child: Text("***Flutter Widget**")),
+        leading: Icon(Icons.menu ), 
+        actions: [Icon(Icons.person)],
       ),
-     
 
+      body: Center(
+        child: Column(
+          children: [
+            Center(
+              child: Container(
+               
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 39, 201, 10),
+                  borderRadius: BorderRadius.circular(10),
+                  
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: 
+                
+                [
+                  Text('Hello! Container..',style: TextStyle(
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                ],),
+                      
+              ),
+            ),
+            
+          ],
+        ),
+      )
+      
     );
+    return scaffold;
   }
 }
