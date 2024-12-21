@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI_task1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Task2(),
+      home: Task1(),
       //  Task1(),
     );
 
@@ -49,6 +50,7 @@ class Task2 extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 39, 201, 10),
                   borderRadius: BorderRadius.circular(10),
+                  
                   
                 ),
                 child: Row(
