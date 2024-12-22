@@ -15,7 +15,7 @@ class _Task1State extends State<Task1> {
         appBar: AppBar(
           title: Center(
             child: Text(
-              "App Store",
+              "Wallpaper Store",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -25,22 +25,44 @@ class _Task1State extends State<Task1> {
           ),
           backgroundColor:  Color.fromARGB(171, 15, 220, 7),
           actions: [
+            Icon(Icons.search,
+            color: Colors.white,
+            ),      
+            SizedBox(width: 20),
+
+            Icon(Icons.more_vert,
+            color: Colors.white),
+            SizedBox(width: 20,),
+
+            Icon(Icons.favorite,
+            color: Colors.white),
+            SizedBox(width: 20),
+
             Icon(
               Icons.person,
               color: Colors.white,
             ),
             SizedBox(width: 30),
+
           ],
+          
           leading: Icon(
-            Icons.shop,
+            Icons.menu,
             color: Colors.white,
           ),
+          
         ),
+        
         backgroundColor: Colors.white,
-        body: Column(
+        
+        body:  Column(
+  
+          
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            
             Center(
+              
               child: Text(
                 '-:Buy & Purchase:-',
                 style: TextStyle(
@@ -60,8 +82,12 @@ class _Task1State extends State<Task1> {
                     color: const Color.fromARGB(255, 17, 161, 72),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  child: ClipRRect(
+                    child: Image.asset('assets/img_1.jpg'),
+                  ),
                 ),
               ),
+            
               Padding(padding: EdgeInsets.all(20)),
               Row(children: [
                 Padding(
@@ -73,6 +99,9 @@ class _Task1State extends State<Task1> {
                       color: const Color.fromARGB(255, 17, 161, 72),
                       borderRadius: BorderRadius.circular(15),
                     ),
+                     child: ClipRRect(
+                    child: Image.asset('assets/img_2.jpg'),
+                  ),
                   ),
                 )
               ]),
@@ -90,6 +119,9 @@ class _Task1State extends State<Task1> {
                     color:  const Color.fromARGB(255, 17, 161, 72),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                   child: ClipRRect(
+                    child: Image.asset('assets/img_3.jpg'),
+                  ),
                 ),
               ),
               Padding(padding: EdgeInsets.all(20)),
@@ -103,6 +135,9 @@ class _Task1State extends State<Task1> {
                       color: const Color.fromARGB(255, 17, 161, 72),
                       borderRadius: BorderRadius.circular(15),
                     ),
+                     child: ClipRRect(
+                    child: Image.asset('assets/img_4.jpg'),
+                  ),
                   ),
                 )
               ]),
@@ -119,6 +154,9 @@ class _Task1State extends State<Task1> {
                   decoration: BoxDecoration(
                     color:  const Color.fromARGB(255, 17, 161, 72),
                     borderRadius: BorderRadius.circular(15),
+                  ),
+                   child: ClipRRect(
+                    child: Image.asset('assets/img_5.jpg'),
                   ),
                 ),
               ),
@@ -133,6 +171,10 @@ class _Task1State extends State<Task1> {
                       color:  const Color.fromARGB(255, 17, 161, 72),
                       borderRadius: BorderRadius.circular(15),
                     ),
+                     child: ClipRRect(
+                    child: Image.asset('assets/img_6.jpg'),
+                    
+                  ),
                   ),
                 )
               ]),
