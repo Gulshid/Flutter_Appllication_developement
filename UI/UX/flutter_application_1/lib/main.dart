@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task1.dart';
+import 'package:flutter_application_1/UI_task2.dart';
+//import 'package:flutter_application_1/UI_task1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,15 +17,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Task1(),
+      home: Task2(),
       //  Task1(),
     );
 
   }
 }
 
-class Task2 extends StatelessWidget {
-  const Task2({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
