@@ -65,13 +65,17 @@ class _task5State extends State<task5> {
                         color: const Color.fromARGB(255, 235, 212, 3),
                       )]
                     ),
+                    
                     child: Center(
                       child: Text('Go to Home',style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),),
+
+                      
                     ),
+                    
                   )
           
             ],),
