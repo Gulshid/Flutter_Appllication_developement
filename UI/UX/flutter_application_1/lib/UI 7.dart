@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/UI_task6.dart';
 
-class Task7 extends StatefulWidget {
-  const Task7({super.key});
+class UI_7 extends StatefulWidget {
+  const UI_7({super.key});
 
   @override
-  State<Task7> createState() => _Task7State();
+  State<UI_7> createState() => _UI_7State();
 }
 
-class _Task7State extends State<Task7> {
+class _UI_7State extends State<UI_7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
