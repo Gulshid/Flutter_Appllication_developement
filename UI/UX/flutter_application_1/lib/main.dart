@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI_10.dart';
+//import 'package:flutter_application_1/UI_8.dart';
+//import 'package:flutter_application_1/UI_8.dart';
+//import 'package:flutter_application_1/UI_9.dart';
+//import 'package:flutter_application_1/square_listview.dart';
 //import 'package:flutter_application_1/UI_task5.dart';
 //import 'package:flutter_application_1/UI_task6.dart';
-import 'package:flutter_application_1/UI%207.dart';
+//import 'package:flutter_application_1/UI%207.dart';
+//import 'package:flutter_application_1/UI_8.dart';
 //import 'package:flutter_application_1/UI_Button.dart';
 //import 'package:flutter_application_1/UI_task4.dart';
 //import 'package:flutter_application_1/UI_task5.dart';
@@ -30,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Task7(),
+      home:UI_10(),
       //  Task1(),
     );
 
