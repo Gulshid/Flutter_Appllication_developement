@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task11.dart';
+//import 'package:flutter_application_1/UI_11.dart';
+import 'package:flutter_application_1/UI_12.dart';
+//import 'package:flutter_application_1/practise.dart';
+//import 'package:flutter_application_1/UI_task11.dart';
 //import 'package:flutter_application_1/UI%207.dart';
 //import 'package:flutter_application_1/UI_task7.dart';
 //import 'package:flutter_application_1/UI_10.dart';
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Instagram_UI(),
+      home:UI_12(),
       //  Task1(),
     );
 
