@@ -64,7 +64,11 @@ class _Task9State extends State<Task9> {
             Container(
               height: 80,
               width: 500,
-              color: const Color.fromARGB(255, 6, 21, 121),
+              decoration:BoxDecoration(
+                   color: const Color.fromARGB(255, 6, 21, 121),
+                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10)),
+              ),
+             
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: Column(
@@ -94,37 +98,49 @@ class _Task9State extends State<Task9> {
               height: 15,
             ),
             Expanded(
-              child: GridView.builder( itemCount: colors.length,
-          gridDelegate:
-              // ignore: prefer_const_constructors
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              child: ClipRRect(
                 
-               
-                itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                  child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: colors[index],
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [BoxShadow(
-                        color: const Color.fromARGB(255, 8, 75, 130),
-                        spreadRadius: 4,
-                        blurRadius: 4,
-                      )]
+                child: GridView.builder( itemCount: colors.length,
+                          gridDelegate:
+                // ignore: prefer_const_constructors
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
+                ),
+                  
+                 
+                  itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: colors[index],
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [BoxShadow(
+                          color: const Color.fromARGB(255, 8, 75, 130),
+                          spreadRadius: 4,
+                          blurRadius: 4,
+                        )]
+                        
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 15),
+                            child: Image.asset(img[index],fit: BoxFit.cover,),
+                          ),
+                          Center(child: Text(name[index],style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),)),
+                        ],
+                      ),
                     ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(img[index],),
-                        Text(name[index]),
-                      ],
-                    ),
-                  ),
-                );
-              }),
+                  );
+                }),
+              ),
             )
           ],
         ));
