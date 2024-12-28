@@ -18,8 +18,7 @@ class _Task10State extends State<Task10> {
           height: 80,
           width: 80,
           
-          child: CircleAvatar(backgroundColor: const Color.fromARGB(255, 43, 50, 231),
-          backgroundImage: AssetImage('assets/my_image.png'),
+          child: CircleAvatar( backgroundImage: AssetImage('assets/my_image.png'),
           radius: 20,
           ),
         ),
