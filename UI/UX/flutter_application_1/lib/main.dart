@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/UI_task12(b).dart';
 import 'package:flutter_application_1/UI_task12.dart';
-//import 'package:flutter_application_1/UI_12(a).dart';
-//import 'package:flutter_application_1/UI_task12.dart';
-//import 'package:flutter_application_1/UI_task1.dart';
-
 
 
 //import 'package:flutter_application_1/Ui_19.dart';
