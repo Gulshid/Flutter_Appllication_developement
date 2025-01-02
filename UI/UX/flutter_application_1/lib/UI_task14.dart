@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UITask14(a).dart';
 
 class Task14 extends StatefulWidget {
   const Task14({super.key});
@@ -152,23 +153,28 @@ class _Task14State extends State<Task14> {
             SizedBox(
               height: 100,
             ),
-            Container(
-              height: 45,
-              width: 400,
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 236, 32, 17),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color.fromARGB(255, 214, 63, 52),
-                      blurRadius: 3,
-                      spreadRadius: 2,
-                    )
-                  ]),
-              child: Center(
-                child: Text(
-                  'BUY NOW',
-                  style: TextStyle(color: Colors.white),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>page1()));
+              },
+              child: Container(
+                height: 45,
+                width: 400,
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 236, 32, 17),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 214, 63, 52),
+                        blurRadius: 3,
+                        spreadRadius: 2,
+                      )
+                    ]),
+                child: Center(
+                  child: Text(
+                    'BUY NOW',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
