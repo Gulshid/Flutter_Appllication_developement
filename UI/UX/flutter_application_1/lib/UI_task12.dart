@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task10.dart';
+import 'package:flutter_application_1/UI_task12(a).dart';
+import 'package:flutter_application_1/UI_task12(b).dart';
+//import 'package:flutter_application_1/UI_task10.dart';
 //import 'package:flutter_application_1/UI_task6.dart';
-import 'package:flutter_application_1/UI_task8.dart';
+//import 'package:flutter_application_1/UI_task8.dart';
 //import 'package:flutter_application_1/UI_task9.dart';
 //import 'package:flutter_application_1/UI_task6.dart';
 
@@ -38,7 +40,7 @@ class _Task12State extends State<Task12> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Task10()));
+                        MaterialPageRoute(builder: (context) => page_1()));
                   },
                   child: Container(
                     height: 60,
@@ -70,7 +72,7 @@ class _Task12State extends State<Task12> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Instagram_UI()));
+                        MaterialPageRoute(builder: (context) => page_2()));
                   },
                   child: Container(
                     height: 60,
