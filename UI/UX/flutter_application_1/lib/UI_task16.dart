@@ -34,8 +34,8 @@ class _Task16State extends State<Task16> {
               ),
               child: Column(children: [
                 CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage('assets/my_image.png'),
+                  radius: 40,
+                  backgroundImage: AssetImage('assets/my_image.png',),
                 )
 
               ],)
