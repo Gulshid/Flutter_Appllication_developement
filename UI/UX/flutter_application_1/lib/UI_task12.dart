@@ -3,11 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/UI_task12(a).dart';
 import 'package:flutter_application_1/UI_task12(b).dart';
-//import 'package:flutter_application_1/UI_task10.dart';
-//import 'package:flutter_application_1/UI_task6.dart';
-//import 'package:flutter_application_1/UI_task8.dart';
-//import 'package:flutter_application_1/UI_task9.dart';
-//import 'package:flutter_application_1/UI_task6.dart';
+
 
 class Task12 extends StatefulWidget {
   const Task12({super.key});
