@@ -79,6 +79,7 @@ flutter:
     - assets/img_18.png
     - assets/img_19.png
     - assets/my_image.png
+    - assets/rating_img.png
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
