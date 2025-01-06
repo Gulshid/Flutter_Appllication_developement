@@ -1,176 +1,110 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
-class Instagram_UI extends StatefulWidget {
-  const Instagram_UI({super.key});
+class Task8 extends StatefulWidget {
+  const Task8({super.key});
 
   @override
-  State<Instagram_UI> createState() => _Instagram_UIState();
+  State<Task8> createState() => _Task8State();
 }
 
-class _Instagram_UIState extends State<Instagram_UI> {
+class _Task8State extends State<Task8> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: 
-           Center(
-             child: Text(
-              "Instagram",
-              style: TextStyle(
-                fontFamily: "Roboto",
-                fontStyle: FontStyle.italic,
-                fontSize: 32,
-                color: Colors.black,
-              ),
-                       ),
-           ),
-
-           leading: 
-           IconButton(
-         icon:   Icon(Icons.camera_alt,color: Colors.black),
-           onPressed: (){}
-           ),
-        
-        actions: [
-          IconButton(
-            icon: Icon(Icons.messenger_sharp, color: Colors.black),
-            onPressed: () {},
-          ),
-          SizedBox(width: 20,),
-        ],
-      ),
-      body: ListView(
-        children: [
-         
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              height: 100,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 6, // Number of stories
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/img_1.jpg'),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          index == 0 ? "Your Story" : "User $index",
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-          Divider(height: 1, color: Colors.grey[300]),
-
-          
-          Column(
+      backgroundColor: const Color.fromARGB(255, 5, 94, 85),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 170,vertical: 100),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage('assets/img_3.jpg'),
-                ),
-                title: Text("westley.windler"),
-                trailing: Icon(Icons.more_vert),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                'assets/img_4.jpg',
-                height: 300,
-                
-                fit: BoxFit.cover,
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.favorite_border),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.chat_bubble_outline),
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.send),
-                      onPressed: () {},
-                    ),
-                    Spacer(),
-                    IconButton(
-                      icon: Icon(Icons.bookmark_border),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text(
-                  "2,875 Likes",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: RichText(
-                  text: TextSpan(
-                    text: "marinadillaco ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "Hi!! #marinad",
-                        style: TextStyle(fontWeight: FontWeight.normal),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+             CircleAvatar( backgroundImage: AssetImage('assets/img_2.jpg'),
+                   radius: 35,
+                   
+                   ),
+              
+          Text('Gulshid Zada',style: TextStyle(color: Colors.white,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          
+          fontFamily: 'Pacifico'),
+          ),
+          SizedBox(height: 5,),
+          Text('Flutter Developer',style: TextStyle(color: const Color.fromARGB(255, 157, 153, 153),
+          //fontSize: 10,
+          letterSpacing: 2.5,
+          fontWeight: FontWeight.normal,
+          fontStyle: FontStyle.italic),
+          ),
+        Divider(),
+        SizedBox(height: 10,),
+        Container(
+          height:35,
+          width: 300,
+          
+          decoration: BoxDecoration(
+          color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [BoxShadow(
+              color: const Color.fromARGB(255, 15, 22, 220),
+                spreadRadius: 3,
+              blurRadius: 3,
+            )]
+          ),
+          
+          child:  Row(
+            children: [
+                SizedBox(width: 10,),
+              Icon(Icons.call,color: const Color.fromARGB(255, 3, 120, 108),),
+              SizedBox(width: 5,),
+              Text('0300-8900392',style: TextStyle(
+                color: const Color.fromARGB(255, 5, 122, 110),
+              ),),
             ],
           ),
-        ],
+        ),
+
+        SizedBox(height: 20,),
+         Container(
+          height:35,
+          width: 300,
+          
+          decoration: BoxDecoration(
+          color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [BoxShadow(
+              color: const Color.fromARGB(255, 15, 22, 220),
+                spreadRadius: 3,
+              blurRadius: 3,
+            )]
+          ),
+          
+          child:  Row(
+            children: [
+              SizedBox(width: 10,),
+              Icon(Icons.email,color: const Color.fromARGB(255, 3, 120, 108),),
+              SizedBox(width: 5,),
+              Text('abc@gmail.com',style: TextStyle(
+                color: const Color.fromARGB(255, 5, 122, 110),
+              ),),
+            ],
+          ),
+        ),
+        Divider(),
+         
+
+          
+          
+          
+          ],),
+        ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: '',
-          ),
-        ],
-      ),
+        
+      
+
+      
     );
   }
 }

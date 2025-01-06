@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task14.dart';
+import 'package:flutter_application_1/UI_task12.dart';
 
 class page2 extends StatefulWidget {
   const page2({super.key});
@@ -195,7 +195,7 @@ class _page2State extends State<page2> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Task14()));
+                          MaterialPageRoute(builder: (context) => Task12()));
                     },
                     child: Text(
                       'Buy Now',

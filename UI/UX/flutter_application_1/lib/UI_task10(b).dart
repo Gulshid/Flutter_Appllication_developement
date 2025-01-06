@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task13.dart';
+import 'package:flutter_application_1/UI_task11.dart';
 
 class page_2 extends StatefulWidget {
   const page_2({super.key});
@@ -118,7 +118,7 @@ class _page_2State extends State<page_2> {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Task13()));
+                      MaterialPageRoute(builder: (context) => Task11()));
                 },
                 child: Container(
                   height: 60,

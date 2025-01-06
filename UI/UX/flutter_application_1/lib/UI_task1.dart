@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:flutter_application_1/UI_task2.dart';
+
+//import 'package:flutter_application_1/UI_task3.dart';
+import 'package:flutter_application_1/UI_task3.dart';
+
 
 class Task1 extends StatefulWidget {
   const Task1({super.key});
@@ -96,16 +99,24 @@ class _Task1State extends State<Task1> {
               Row(children: [
                 Padding(
                   padding: const EdgeInsets.all(20),
-                  child: Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 17, 161, 72),
-                      borderRadius: BorderRadius.circular(15),
+
+                  
+                  child: GestureDetector(
+                    onTap: (){
+                     
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>task3()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 17, 161, 72),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                       child: ClipRRect(
+                      child: Image.asset('assets/img_2.jpg'),
                     ),
-                     child: ClipRRect(
-                    child: Image.asset('assets/img_2.jpg'),
-                  ),
+                    ),
                   ),
                 )
               ]),

@@ -1,209 +1,175 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/UI%207.dart';
 import 'package:flutter_application_1/UI_task7.dart';
 
 class Task6 extends StatefulWidget {
   const Task6({super.key});
 
   @override
-  State<Task6> createState() => _Task6State();
+  State<Task6> createState() => Task6State();
 }
 
-class _Task6State extends State<Task6> {
+class Task6State extends State<Task6> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back),
+        title: Center(
+          child: Text(
+            "Instagram",
+            style: TextStyle(
+              fontFamily: "Roboto",
+              fontStyle: FontStyle.italic,
+              fontSize: 32,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        leading: IconButton(
+            icon: Icon(Icons.camera_alt, color: Colors.black),
+            onPressed: () {}),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.messenger_sharp, color: Colors.black),
+            onPressed: () {},
+          ),
+          SizedBox(
+            width: 20,
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 120,
-                  ),
-                  Text(
-                    "Let's get Started",
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
               height: 100,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Task7()));
-              },
-            ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Container(
-                    height: 40,
-                    width: 300,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(25),
-                        border: Border.all(
-                          color: const Color.fromARGB(255, 242, 205, 21),
-                        )),
-                    child: Row(
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 6, // Number of stories
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Column(
                       children: [
-                        SizedBox(
-                          width: 20,
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('assets/img_1.jpg'),
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
-                          child: Icon(
-                            Icons.facebook,
-                            color: const Color.fromARGB(255, 26, 76, 228),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
+                        SizedBox(height: 5),
                         Text(
-                          'Continue with Facebook',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                          index == 0 ? "Your Story" : "User $index",
+                          style: TextStyle(fontSize: 12),
+                        ),
                       ],
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 40,
-                  width: 300,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(25),
-                      border: Border.all(
-                        color: const Color.fromARGB(255, 242, 205, 21),
-                      )),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Image.asset(
-                          'assets/img_6.jpg',
-                          height: 20,
-                          width: 30,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        'Continue with Google',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 40,
-                  width: 300,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(25),
-                      border: Border.all(
-                        color: const Color.fromARGB(255, 242, 205, 21),
-                      )),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Icon(Icons.apple),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        'Continue with Apple',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text('______________or______________'),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 40,
-                  width: 300,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(25),
-                      border: Border.all(
-                        color: const Color.fromARGB(255, 242, 205, 21),
-                      )),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Icon(
-                          Icons.email,
-                          color: Colors.black,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        'Continue with Email',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ],
+                  );
+                },
+              ),
             ),
-          ],
-        ),
+          ),
+          Divider(height: 1, color: Colors.grey[300]),
+          Column(
+            children: [
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('assets/img_3.jpg'),
+                ),
+                title: Text("westley.windler"),
+                trailing: Icon(Icons.more_vert),
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  'assets/img_4.jpg',
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.favorite_border),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.chat_bubble_outline),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.send),
+                      onPressed: () {},
+                    ),
+                    Spacer(),
+                    IconButton(
+                      icon: Icon(Icons.bookmark_border),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Task7()));
+                  },
+                  child: Text(
+                    "2,875 Likes",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: RichText(
+                  text: TextSpan(
+                    text: "marinadillaco ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Hi!! #marinad",
+                        style: TextStyle(fontWeight: FontWeight.normal),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_box_outlined),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: '',
+          ),
+        ],
       ),
     );
   }

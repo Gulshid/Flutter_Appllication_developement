@@ -1,6 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI_task10(a).dart';
+import 'package:flutter_application_1/UI_task10(b).dart';
+
 
 class Task10 extends StatefulWidget {
   const Task10({super.key});
@@ -13,98 +16,92 @@ class _Task10State extends State<Task10> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 5, 94, 85),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 170,vertical: 100),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-             CircleAvatar( backgroundImage: AssetImage('assets/img_2.jpg'),
-                   radius: 35,
-                   
-                   ),
-              
-          Text('Gulshid Zada',style: TextStyle(color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-          
-          fontFamily: 'Pacifico'),
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/img_2.jpg',
+              fit: BoxFit.cover,
+            ),
           ),
-          SizedBox(height: 5,),
-          Text('Flutter Developer',style: TextStyle(color: const Color.fromARGB(255, 157, 153, 153),
-          //fontSize: 10,
-          letterSpacing: 2.5,
-          fontWeight: FontWeight.normal,
-          fontStyle: FontStyle.italic),
+          SizedBox(
+            height: 500,
           ),
-        Divider(),
-        SizedBox(height: 10,),
-        Container(
-          height:35,
-          width: 300,
-          
-          decoration: BoxDecoration(
-          color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [BoxShadow(
-              color: const Color.fromARGB(255, 15, 22, 220),
-                spreadRadius: 3,
-              blurRadius: 3,
-            )]
+          Align(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => page_1()));
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 500,
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color.fromARGB(255, 14, 177, 20),
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => page_2()));
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 500,
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Register',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-          
-          child:  Row(
-            children: [
-                SizedBox(width: 10,),
-              Icon(Icons.call,color: const Color.fromARGB(255, 3, 120, 108),),
-              SizedBox(width: 5,),
-              Text('0300-8900392',style: TextStyle(
-                color: const Color.fromARGB(255, 5, 122, 110),
-              ),),
-            ],
-          ),
-        ),
-
-        SizedBox(height: 20,),
-         Container(
-          height:35,
-          width: 300,
-          
-          decoration: BoxDecoration(
-          color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [BoxShadow(
-              color: const Color.fromARGB(255, 15, 22, 220),
-                spreadRadius: 3,
-              blurRadius: 3,
-            )]
-          ),
-          
-          child:  Row(
-            children: [
-              SizedBox(width: 10,),
-              Icon(Icons.email,color: const Color.fromARGB(255, 3, 120, 108),),
-              SizedBox(width: 5,),
-              Text('abc@gmail.com',style: TextStyle(
-                color: const Color.fromARGB(255, 5, 122, 110),
-              ),),
-            ],
-          ),
-        ),
-        Divider(),
-         
-
-          
-          
-          
-          ],),
-        ),
+        ],
       ),
-        
-      
-
-      
     );
   }
 }

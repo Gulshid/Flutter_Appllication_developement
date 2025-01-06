@@ -9,10 +9,11 @@ class screen_1 extends StatefulWidget {
 }
 
 class _screen_1State extends State<screen_1> {
+  int my_index=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white,      
       body: Stack(
         children: [
           AppBar(
