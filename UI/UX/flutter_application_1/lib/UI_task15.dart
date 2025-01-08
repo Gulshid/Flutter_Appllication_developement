@@ -41,6 +41,7 @@ class _Task15State extends State<Task15> {
            Container(
             color: Colors.white,
              child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: 10,),
                   Container(height: 150,
@@ -54,14 +55,14 @@ class _Task15State extends State<Task15> {
                       color: Colors.grey,
                     )]
                   ),
-                  child: Column(children: [
-                    Center(
-                      child: Text("57.0 kg",style: TextStyle(
-                        color: const Color.fromARGB(255, 4, 67, 7),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30
-                      ),),
-                    ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Text("57.0 kg",style: TextStyle(
+                      color: const Color.fromARGB(255, 4, 67, 7),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30
+                    ),),
                     SizedBox(height: 5,),
                      Text("Current weight",style: TextStyle(
                       color: Colors.black,
@@ -82,7 +83,9 @@ class _Task15State extends State<Task15> {
                       color: Colors.grey,
                     )]
                   ),
-                  child: Column(children: [
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                     Center(
                       child: Text("-3.0 kg",style: TextStyle(
                         color: const Color.fromARGB(255, 4, 67, 7),
@@ -110,7 +113,9 @@ class _Task15State extends State<Task15> {
                       color: Colors.grey,
                     )]
                   ),
-                  child: Column(children: [
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                     Center(
                       child: Text("-3.0 kg",style: TextStyle(
                         color: const Color.fromARGB(255, 4, 67, 7),
@@ -136,7 +141,9 @@ class _Task15State extends State<Task15> {
                       color: Colors.grey,
                     )]
                   ),
-                  child: Column(children: [
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                     Center(
                       child: Text("-3.0 kg",style: TextStyle(
                         color: const Color.fromARGB(255, 4, 67, 7),
