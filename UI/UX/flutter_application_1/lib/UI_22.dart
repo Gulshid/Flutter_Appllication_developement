@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Task15 extends StatefulWidget {
-  const Task15({super.key});
+class Ui_22 extends StatefulWidget {
+  const Ui_22({super.key});
 
   @override
-  State<Task15> createState() => _Task15State();
+  State<Ui_22> createState() => _Ui_22State();
 }
 
-class _Task15State extends State<Task15> {
+class _Ui_22State extends State<Ui_22> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(length: 3,
