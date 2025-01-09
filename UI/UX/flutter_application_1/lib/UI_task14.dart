@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI_task11.dart';
+import 'package:flutter_application_1/UI_task12.dart';
+import 'package:flutter_application_1/UI_task13.dart';
+import 'package:flutter_application_1/UI_task15.dart';
 import 'package:flutter_application_1/Ui_task14(a).dart';
 
 class Task14 extends StatefulWidget {
@@ -14,11 +18,9 @@ class _Task14State extends State<Task14> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:const Color.fromARGB(255, 98, 136, 202),
+        backgroundColor: const Color.fromARGB(255, 98, 136, 202),
       ),
-      
-
-       drawer: Drawer(
+      drawer: Drawer(
         backgroundColor: Colors.deepPurple,
         child: Column(
           children: [
@@ -35,6 +37,11 @@ class _Task14State extends State<Task14> {
                 'H o m e ',
                 style: TextStyle(color: Colors.black),
               ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Task12()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -46,6 +53,11 @@ class _Task14State extends State<Task14> {
                 'S e t t i n g ',
                 style: TextStyle(color: Colors.black),
               ),
+               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Task13()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -57,6 +69,11 @@ class _Task14State extends State<Task14> {
                 'F a c e ',
                 style: TextStyle(color: Colors.black),
               ),
+               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Task14()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -68,6 +85,11 @@ class _Task14State extends State<Task14> {
                 'S e a r c h ',
                 style: TextStyle(color: Colors.black),
               ),
+               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Task15()));
+              },
             ),
             ListTile(
               leading: Icon(
@@ -79,11 +101,15 @@ class _Task14State extends State<Task14> {
                 'H e a d p h o n e ',
                 style: TextStyle(color: Colors.black),
               ),
+               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Task11()));
+              },
             ),
           ],
         ),
       ),
-
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(10), topRight: Radius.circular(10)),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/UI_23.dart';
-import 'package:flutter_application_1/UI_24.dart';
+//import 'package:flutter_application_1/UI_24.dart';
+import 'package:flutter_application_1/UI_task14.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Bottom_Navbar(),
+      home:Task14(),
       // 
     );
 
