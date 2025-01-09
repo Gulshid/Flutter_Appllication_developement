@@ -1,39 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task15.dart';
-//import 'package:flutter_application_1/UI_task15.dart';
+import 'package:flutter_application_1/UI_task1.dart';
 
-
-class Spalash_screen extends StatefulWidget {
-  const Spalash_screen({super.key});
+class splash_screen extends StatefulWidget {
+  const splash_screen({super.key});
 
   @override
-  State<Spalash_screen> createState() => _Spalash_screenState();
+  State<splash_screen> createState() => _splash_screenState();
 }
 
-class _Spalash_screenState extends State<Spalash_screen> {
+class _splash_screenState extends State<splash_screen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Task15()));
+          context, MaterialPageRoute(builder: (context) =>Task1()));
     });
-    initState();
+    super.initState();
   }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      color: const Color.fromARGB(255, 88, 7, 103),
-      child: Center(
-        child: Text(
-          "Hello World!",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+       body: Center(
+        child: Container(
+          color: Colors.blue,
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("L o a d i n g",style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),),
+              CircularProgressIndicator(),
+            ],
           ),
-        ),
-      ),
-    ));
+        ),),
+
+    );
   }
 }
