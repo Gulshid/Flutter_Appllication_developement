@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/UI_23.dart';
 //import 'package:flutter_application_1/UI_task14.dart';
-import 'package:flutter_application_1/UI_task15.dart';
+//import 'package:flutter_application_1/UI_task15.dart';
 //import 'package:flutter_application_1/UI_22.dart';
 //import 'package:flutter_application_1/UI_task15.dart';
 //import 'package:flutter_application_1/UI_task14.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Task15(),
+      home:Spalash_screen(),
       // 
     );
 
