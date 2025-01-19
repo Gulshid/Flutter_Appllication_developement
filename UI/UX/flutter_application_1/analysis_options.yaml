@@ -10,7 +10,9 @@
 analyzer:
   errors:
     camel_case_types: ignore
+    dead_code: ignore
     must_call_super: ignore
+    non_constant_identifier_names: ignore
     prefer_const_constructors: ignore
     prefer_const_literals_to_create_immutables: ignore
 include: package:flutter_lints/flutter.yaml
