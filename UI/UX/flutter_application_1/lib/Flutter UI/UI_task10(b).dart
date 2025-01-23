@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task11.dart';
+import 'package:flutter_application_1/Flutter%20UI/UI_task11.dart';
 
 class page_2 extends StatefulWidget {
   const page_2({super.key});

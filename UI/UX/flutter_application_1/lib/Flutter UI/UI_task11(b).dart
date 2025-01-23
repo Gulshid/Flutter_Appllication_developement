@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task12.dart';
+import 'package:flutter_application_1/Flutter%20UI/UI_task12.dart';
 
 class page2 extends StatefulWidget {
   const page2({super.key});

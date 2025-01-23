@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task6.dart';
+import 'package:flutter_application_1/Flutter%20UI/UI_task6.dart';
 
 class UI_7 extends StatefulWidget {
   const UI_7({super.key});

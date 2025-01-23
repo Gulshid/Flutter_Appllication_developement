@@ -8,8 +8,8 @@ class Practise extends StatefulWidget {
 }
 
 class _PractiseState extends State<Practise> {
-  List a = ['a', 'b', 'c','d'];
-  List colors = [Colors.blue, Colors.green, Colors.yellow,Colors.purple];
+  List a = ['a', 'b', 'c', 'd'];
+  List colors = [Colors.blue, Colors.green, Colors.yellow, Colors.purple];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,32 +133,45 @@ class _PractiseState extends State<Practise> {
     )
    
    */
-            Expanded(
-              child: ListView.builder(
+            // Expanded(
+            //   child: ListView.builder(
+            //     itemCount: colors.length,
+            //     itemBuilder: (context, index) {
+            //         return Padding(
+            //           padding: const EdgeInsets.all(3.0),
+            //           child: Container(
+            //             height: 300,
+            //             width: 600,
+            //             decoration: BoxDecoration(
+            //   color: colors[index],
+            //   borderRadius: BorderRadius.circular(15),
+            //             ),
+            //             child: Column(
+            //   children: [
+            //       Text(a[index]),
+            //   ],
+            //             ),
+            //           ),
+            //         );
+            //       }),
+            // )
+
+            GridView.builder(
                 itemCount: colors.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  mainAxisSpacing: 20,
+                ),
                 itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Container(
-                        height: 300,
-                        width: 600,
-                        decoration: BoxDecoration(
-              color: colors[index],
-              borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Column(
-              children: [
-                  Text(a[index]),
-              ],
-                        ),
-                      ),
-                    );
-                  }),
-            )
-            
+                  return Container(
 
-
-            );
-              
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      color:colors[index],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  );
+                }));
   }
 }

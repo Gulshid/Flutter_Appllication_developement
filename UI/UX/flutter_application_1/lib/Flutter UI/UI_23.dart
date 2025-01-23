@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/UI_task1.dart';
+import 'package:flutter_application_1/Flutter%20UI/UI_task1.dart';
 
 class splash_screen extends StatefulWidget {
   const splash_screen({super.key});
