@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Flutter%20APi/Api_Models/model.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Models/get_100_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
 
-class post_api extends StatefulWidget {
+class post_api extends StatefulWidget {                     
   const post_api({super.key});
 
   @override
