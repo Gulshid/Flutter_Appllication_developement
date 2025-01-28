@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/Flutter%20APi/Api_Models/practise_api.dart';
-import 'package:flutter_application_1/Flutter%20APi/get_100_post_api.dart';
+
+// import 'package:flutter_application_1/Flutter%20APi/get_100_post_api.dart';
+import 'package:flutter_application_1/Flutter%20APi/get_10_users_detail.dart';
 // import 'package:flutter_application_1/Flutter%20APi/get_100_post_api.dart';
 
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
-          home:post_api(),
+          home:get_10_users(),
         );
       },
     );
