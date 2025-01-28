@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // import 'package:flutter_application_1/Flutter%20APi/get_100_post_api.dart';
-import 'package:flutter_application_1/Flutter%20APi/get_10_users_detail.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_program/get_10_users_detail.dart';
 // import 'package:flutter_application_1/Flutter%20APi/get_100_post_api.dart';
 
 
