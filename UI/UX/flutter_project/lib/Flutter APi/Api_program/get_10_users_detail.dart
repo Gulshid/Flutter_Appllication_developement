@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Flutter%20APi/Api_Models/get_10_users_detail.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Models/get_10_users_detail_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -7,14 +7,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
 
-class post_api extends StatefulWidget {                     
-  const post_api({super.key});
+class get_api extends StatefulWidget {                     
+  const get_api({super.key});
 
   @override
-  State<post_api> createState() => _post_apiState();
+  State<get_api> createState() => _get_apiState();
 }
 
-class _post_apiState extends State<post_api> {
+class _get_apiState extends State<get_api> {
   List<PostApi> post_Api = [];
   @override
   Widget build(BuildContext context) {
