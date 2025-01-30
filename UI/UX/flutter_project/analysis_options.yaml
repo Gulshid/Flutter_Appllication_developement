@@ -15,6 +15,7 @@ analyzer:
     non_constant_identifier_names: ignore
     prefer_const_constructors: ignore
     prefer_const_literals_to_create_immutables: ignore
+    prefer_interpolation_to_compose_strings: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

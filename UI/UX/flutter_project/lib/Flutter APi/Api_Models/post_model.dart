@@ -9,41 +9,29 @@ PostModel postModelFromJson(String str) => PostModel.fromJson(json.decode(str));
 String postModelToJson(PostModel data) => json.encode(data.toJson());
 
 class PostModel {
-    String? message;
-    Data? data;
+    String? email;
+    String? password;
+    String? id;
+    DateTime? createdAt;
 
     PostModel({
-        this.message,
-        this.data,
+        this.email,
+        this.password,
+        this.id,
+        this.createdAt,
     });
 
     factory PostModel.fromJson(Map<String, dynamic> json) => PostModel(
-        message: json["message"],
-        data: json["data"] == null ? null : Data.fromJson(json["data"]),
-    );
-
-    Map<String, dynamic> toJson() => {
-        "message": message,
-        "data": data?.toJson(),
-    };
-}
-
-class Data {
-    String? email;
-    String? password;
-
-    Data({
-        this.email,
-        this.password,
-    });
-
-    factory Data.fromJson(Map<String, dynamic> json) => Data(
         email: json["email"],
         password: json["password"],
+        id: json["id"],
+        createdAt: json["createdAt"] == null ? null : DateTime.parse(json["createdAt"]),
     );
 
     Map<String, dynamic> toJson() => {
         "email": email,
         "password": password,
+        "id": id,
+        "createdAt": createdAt?.toIso8601String(),
     };
 }
