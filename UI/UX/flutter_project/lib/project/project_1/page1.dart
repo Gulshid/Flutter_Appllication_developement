@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/project/sc1.dart';
-import 'package:flutter_application_1/project/sc2.dart';
-import 'package:flutter_application_1/project/sc3.dart';
-import 'package:flutter_application_1/project/sc4.dart';
+import 'package:flutter_application_1/project/project_1/sc1.dart';
+import 'package:flutter_application_1/project/project_1/sc2.dart';
+import 'package:flutter_application_1/project/project_1/sc3.dart';
+import 'package:flutter_application_1/project/project_1/sc4.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class pa_1 extends StatefulWidget {
