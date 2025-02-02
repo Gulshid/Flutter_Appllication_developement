@@ -9,6 +9,7 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   errors:
+    avoid_types_as_parameter_names: ignore
     camel_case_types: ignore
     dead_code: ignore
     must_call_super: ignore
