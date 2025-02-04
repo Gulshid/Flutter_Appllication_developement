@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Flutter%20UI/UI_task10.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/login_Screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,9 +14,9 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 10), () {
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Task10()));
+          context, MaterialPageRoute(builder: (context) => login()));
     });
     super.initState();
   }
@@ -31,22 +31,22 @@ class _SplashState extends State<Splash> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20.r),
-              child: Image.asset('assets/img14.png',
+              child: Image.asset('assets/mobile_photo.jpg',
               height: 150.h, 
               width: 150.w,),
 
             ),
-            SizedBox(height: 70.h,),
+            SizedBox(height: 30.h,),
             Text(
               'Welcome',
               style: GoogleFonts.agbalumo(fontSize: 20.sp),
             ),
              SizedBox(
-              height: 200.h,
+              height: 50.h,
             ),
-            SpinKitRing(
+            SpinKitFadingCircle(
               color: Colors.teal,
-              size: 50.0,
+              size: 80.0,
             ),
            
             

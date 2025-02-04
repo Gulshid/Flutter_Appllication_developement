@@ -1,8 +1,10 @@
 // ignore: unnecessary_import
+// ignore_for_file: avoid_print
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/Flutter%20UI/UI_Button.dart';
-import 'package:flutter_application_1/main.dart';
+// import 'package:flutter_application_1/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -26,15 +28,21 @@ class _loginState extends State<login> {
     init();
   }
 
+  Future message() async {
+    SharedPreferences localStorage = await SharedPreferences.getInstance();
+
+    print(
+        "Email:-${emailController.text = localStorage.getString('email') ?? ''}");
+    print(
+        "Password:-${passwordController.text = localStorage.getString('password') ?? ''}");
+    print('Account is sucessfully logined---->');
+  }
+
   Future init() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();
     localStorage.setString('email', "gulshidzada");
     localStorage.setString('password', "12345678");
-    print('${localStorage['email']}');
-    // setState(() {
-    //   emailController.text = localStorage.getString('email') ?? '';
-    //   passwordController.text = localStorage.getString('password') ?? '';
-    // });
+    // print('${localStorage['email']}');
   }
 
   @override
@@ -165,25 +173,31 @@ class _loginState extends State<login> {
               init();
             },
             child: Center(
-              child: Container(
-                height: 40.h,
-                width: 300.w,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(25.r),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.blueGrey,
-                        blurRadius: 1,
-                        spreadRadius: 3,
-                      )
-                    ]),
-                child: Center(
-                    child: Text(
-                  'login',
-                  style:
-                      GoogleFonts.agbalumo(fontSize: 30, color: Colors.white),
-                )),
+              child: ElevatedButton(
+                onPressed: () {
+                  message();
+                  
+                },
+                child: Container(
+                  height: 40.h,
+                  width: 300.w,
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(25.r),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blueGrey,
+                          blurRadius: 1,
+                          spreadRadius: 3,
+                        )
+                      ]),
+                  child: Center(
+                      child: Text(
+                    'login',
+                    style:
+                        GoogleFonts.agbalumo(fontSize: 30, color: Colors.white),
+                  )),
+                ),
               ),
             ),
           ),

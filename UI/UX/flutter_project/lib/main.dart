@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/Splash_Screen.dart';
 // import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/Splash_Screen.dart';
-import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/login_Screen.dart';
+// import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/login_Screen.dart';
 // import 'package:flutter_application_1/Flutter%20APi/Api_program/post_api.dart';
 // import 'package:flutter_application_1/Flutter%20APi/local_database/shared_preference.dart';
 // import 'package:flutter_application_1/Flutter%20APi/Api_program/post_api.dart';
@@ -15,7 +16,7 @@ import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/login_Screen.dart'
 import 'package:http/http.dart' as http;
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,15 +24,7 @@ void main() {
   
 }
 
-  SharedPreferences? localStorage;
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
-  
-  Future init() async {
-    localStorage = await SharedPreferences.getInstance();
-  }
-
+ 
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -50,7 +43,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
-          home:login(),
+          home:Splash(),
         );
       },
     );
