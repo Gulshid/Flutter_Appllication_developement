@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:ui';
 
 // ignore: must_be_immutable
 class login extends StatefulWidget {
@@ -20,6 +21,85 @@ class login extends StatefulWidget {
 }
 
 class _loginState extends State<login> {
+  //function
+  void showSuccessPopup(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: true, 
+      builder: (BuildContext context) {
+        return Dialog(
+            backgroundColor: Colors.transparent, 
+            child: Column(
+              children: [
+                BackdropFilter(
+
+                  filter: ImageFilter.blur(sigmaX: 2,sigmaY: 4),
+
+                ),
+              
+                SizedBox(height: 50.h),
+                Container(
+                  height: 400.h,
+                  width: 250.w,
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(height: 50.h,),
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundColor: const Color.fromARGB(255, 5, 154, 10),
+                        child: Icon(Icons.check, size: 60, color: Colors.white),
+                      ),
+                      SizedBox(height: 20.h),
+                    
+                      Text(
+                        "Login Successful!",
+                        style: TextStyle(
+                            fontSize: 25.sp, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 20.h),
+               
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 35.h,
+                          width: 200.w,
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(16.r),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 1,
+                                  spreadRadius: 2,
+                                )
+                              ]),
+                          child: Center(
+                            child: Text(
+                              'Home Screen',
+                              style: GoogleFonts.agbalumo(
+                                  fontSize: 20.sp, color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ));
+      },
+    );
+  }
+
+//
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override
@@ -176,7 +256,7 @@ class _loginState extends State<login> {
               child: ElevatedButton(
                 onPressed: () {
                   message();
-                  
+                  showSuccessPopup(context);
                 },
                 child: Container(
                   height: 40.h,
