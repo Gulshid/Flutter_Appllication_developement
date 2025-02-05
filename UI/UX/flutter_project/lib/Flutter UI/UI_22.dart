@@ -49,6 +49,7 @@ class _Ui_22State extends State<Ui_22> {
       ),
 
       Container(
+         color: const Color.fromARGB(255, 128, 179, 141),
          child: Column(
           children: [
             Text("Search"),
@@ -57,10 +58,10 @@ class _Ui_22State extends State<Ui_22> {
 
           ],
         ),
-        color: const Color.fromARGB(255, 128, 179, 141),
       ),
 
       Container(
+         color: const Color.fromARGB(255, 149, 208, 222),
          child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
@@ -70,7 +71,6 @@ class _Ui_22State extends State<Ui_22> {
 
           ],
         ),
-        color: const Color.fromARGB(255, 149, 208, 222),
       ),
      ]),
 

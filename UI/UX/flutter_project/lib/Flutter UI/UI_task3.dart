@@ -258,8 +258,8 @@ class _task3State extends State<task3> {
               child: Container(
                 height: 40,
                 width: 100,
-                child: Center(child: Text('button')),
                 decoration: BoxDecoration(color: Colors.amber),
+                child: Center(child: Text('button')),
               ),
             )
                   ],

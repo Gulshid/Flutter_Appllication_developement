@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
 }
 
 class UITaskScreen extends StatelessWidget {
+  const UITaskScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +84,7 @@ class UITaskScreen extends StatelessWidget {
 class TaskTile extends StatelessWidget {
   final String title;
 
-  const TaskTile({Key? key, required this.title}) : super(key: key);
+  const TaskTile({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -17,6 +17,7 @@ class _splash_screenState extends State<splash_screen> {
     });
     super.initState();
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
        body: Center(
