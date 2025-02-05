@@ -1,18 +1,15 @@
-// import 'package:flutter/cupertino.dart';
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class Sucess extends StatefulWidget {
-//   const Sucess({super.key});
+class login_info extends StatefulWidget {
+  const login_info({super.key});
 
-//   @override
-//   State<Sucess> createState() => _SucessState();
-// }
+  @override
+  State<login_info> createState() => _login_infoState();
+}
 
-// class _SucessState extends State<Sucess> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: ,
-//     );
-//   }
-// }
+class _login_infoState extends State<login_info> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}

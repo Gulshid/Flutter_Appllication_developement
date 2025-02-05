@@ -3,6 +3,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/info_Screen.dart';
 // import 'package:flutter_application_1/Flutter%20UI/UI_Button.dart';
 // import 'package:flutter_application_1/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,18 +26,15 @@ class _loginState extends State<login> {
   void showSuccessPopup(BuildContext context) {
     showDialog(
       context: context,
-      barrierDismissible: true, 
+      barrierDismissible: true,
       builder: (BuildContext context) {
         return Dialog(
-            backgroundColor: Colors.transparent, 
+            backgroundColor: Colors.transparent,
             child: Column(
               children: [
                 BackdropFilter(
-
-                  filter: ImageFilter.blur(sigmaX: 2,sigmaY: 4),
-
+                  filter: ImageFilter.blur(sigmaX: 2, sigmaY: 4),
                 ),
-              
                 SizedBox(height: 50.h),
                 Container(
                   height: 400.h,
@@ -49,21 +47,21 @@ class _loginState extends State<login> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(height: 50.h,),
+                      SizedBox(
+                        height: 50.h,
+                      ),
                       CircleAvatar(
-                        radius: 40,
+                        radius: 60,
                         backgroundColor: const Color.fromARGB(255, 5, 154, 10),
-                        child: Icon(Icons.check, size: 60, color: Colors.white),
+                        child: Icon(Icons.check, size: 80, color: Colors.white),
                       ),
                       SizedBox(height: 20.h),
-                    
                       Text(
-                        "Login Successful!",
+                        "     Login\nSuccessful!",
                         style: TextStyle(
                             fontSize: 25.sp, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 20.h),
-               
                       ElevatedButton(
                         onPressed: () {
                           Navigator.pop(context);
@@ -99,9 +97,9 @@ class _loginState extends State<login> {
     );
   }
 
-//
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -110,7 +108,6 @@ class _loginState extends State<login> {
 
   Future message() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();
-
     print(
         "Email:-${emailController.text = localStorage.getString('email') ?? ''}");
     print(
@@ -225,8 +222,10 @@ class _loginState extends State<login> {
               child: TextField(
                 controller: passwordController,
                 decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.r))),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                ),
               ),
             ),
           ),
@@ -251,12 +250,14 @@ class _loginState extends State<login> {
           GestureDetector(
             onTap: () {
               init();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => login_info()));
             },
             child: Center(
               child: ElevatedButton(
                 onPressed: () {
-                  message();
                   showSuccessPopup(context);
+                  message();
                 },
                 child: Container(
                   height: 40.h,
@@ -268,7 +269,7 @@ class _loginState extends State<login> {
                         BoxShadow(
                           color: Colors.blueGrey,
                           blurRadius: 1,
-                          spreadRadius: 3,
+                          spreadRadius: 2,
                         )
                       ]),
                   child: Center(
