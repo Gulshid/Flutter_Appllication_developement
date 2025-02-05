@@ -62,7 +62,9 @@ class _loginState extends State<login> {
                       SizedBox(height: 20.h),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pop(context);
+
+                          Navigator.push(context,
+                           MaterialPageRoute(builder: (context) => login_info()));
                         },
                         child: Container(
                           height: 35.h,
@@ -115,8 +117,8 @@ class _loginState extends State<login> {
 
   Future init() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();
-    localStorage.setString('email', "gulshidzada");
-    localStorage.setString('password', "12345678");
+    localStorage.setString('email', "gulshidzada@gmail.com");
+    localStorage.setString('password', "11223344");
     // print('${localStorage['email']}');
   }
 
@@ -245,38 +247,32 @@ class _loginState extends State<login> {
           SizedBox(
             height: 10.h,
           ),
-          GestureDetector(
-            onTap: () {
-              init();
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => login_info()));
-            },
-            child: Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  showSuccessPopup(context);
-                  message();
-                },
-                child: Container(
-                  height: 40.h,
-                  width: 300.w,
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(25.r),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.blueGrey,
-                          blurRadius: 1,
-                          spreadRadius: 2,
-                        )
-                      ]),
-                  child: Center(
-                      child: Text(
-                    'login',
-                    style:
-                        GoogleFonts.agbalumo(fontSize: 30, color: Colors.white),
-                  )),
-                ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                showSuccessPopup(context);
+                // message();
+              },
+              child: Container(
+                height: 40.h,
+                width: 300.w,
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(25.r),
+                    boxShadow: [
+                      BoxShadow(
+                        blurStyle: BlurStyle.inner,
+                        color: Colors.black,
+                        blurRadius: 1,
+                        spreadRadius: 2,
+                      )
+                    ]),
+                child: Center(
+                    child: Text(
+                  'login',
+                  style:
+                      GoogleFonts.agbalumo(fontSize: 30, color: Colors.white),
+                )),
               ),
             ),
           ),
@@ -287,10 +283,10 @@ class _loginState extends State<login> {
             children: [
               Expanded(
                   child: Divider(
-                color: Colors.blueGrey,
+                color: Colors.black,
               )),
-              Text('or'),
-              Expanded(child: Divider(color: Colors.blueGrey)),
+              Text('or',style: TextStyle(fontWeight: FontWeight.bold),),
+              Expanded(child: Divider(color: Colors.black)),
             ],
           ),
           SizedBox(
@@ -345,7 +341,7 @@ class _loginState extends State<login> {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Text(
                   "Dont't have an account?",
-                  style: TextStyle(fontSize: 15.sp, color: Colors.black),
+                  style:GoogleFonts.agbalumo(fontSize: 15.sp, color: Colors.black),
                 ),
               ),
               GestureDetector(
