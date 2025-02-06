@@ -16,6 +16,7 @@ class login_info extends StatefulWidget {
 class _login_infoState extends State<login_info> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  @override
   void initState() {
     super.initState();
     init();
