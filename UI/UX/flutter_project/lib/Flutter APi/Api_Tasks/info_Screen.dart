@@ -1,6 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Flutter%20APi/Api_Tasks_1/Edit_profile.dart';
+import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/Edit_profile.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
