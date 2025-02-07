@@ -145,34 +145,34 @@ class _profileState extends State<profile> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Name', style: GoogleFonts.agbalumo()),
-                      const SizedBox(height: 3),
+                       SizedBox(height:3.h),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10.r)),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                       Text('Email', style: GoogleFonts.agbalumo()),
-                      const SizedBox(height: 3),
+                      SizedBox(height: 3.h),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20.h),
                       Text('Phone', style: GoogleFonts.agbalumo()),
-                      const SizedBox(height: 3),
+                      SizedBox(height: 3.h),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10.r)),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                     SizedBox(height: 20.h),
                       Text('Password', style: GoogleFonts.agbalumo()),
-                      const SizedBox(height: 3),
+                    SizedBox(height: 3.h),
                       TextFormField(
                         obscureText: true, // Hide password input
                         decoration: InputDecoration(
@@ -180,7 +180,7 @@ class _profileState extends State<profile> {
                               borderRadius: BorderRadius.circular(10)),
                         ),
                       ),
-                      const SizedBox(height: 50),
+                      SizedBox(height: 30.h),
                       GestureDetector(
                         onTap: () {
                           print('Profile updated!');
@@ -191,7 +191,7 @@ class _profileState extends State<profile> {
                           height: 42,
                           decoration: BoxDecoration(
                             color: Colors.black,
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(20.r),
                           ),
                           child: Center(
                             child: Text('Update',
