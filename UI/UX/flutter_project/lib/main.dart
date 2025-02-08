@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/Task_login.dart';
+// import 'package:flutter_application_1/Flutter%20APi/Api_Tasks/Task_login.dart';
+import 'package:flutter_application_1/Flutter%20UI/UI_Amimation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
           ),
-          home:task_login(),
+          home:animation_1(),
         );
       },
     );
