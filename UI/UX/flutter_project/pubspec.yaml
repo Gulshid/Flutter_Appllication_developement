@@ -102,7 +102,6 @@ flutter:
     - assets/my_image.png
     - assets/rating_img.png
     - assets/mobile_photo.jpg
-    - assets/animated_img_1.gif
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
