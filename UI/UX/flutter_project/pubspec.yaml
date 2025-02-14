@@ -51,16 +51,18 @@ dependencies:
   shared_preferences: ^2.5.1
   hive_flutter: ^1.1.0
   hive: ^2.2.3
+  sqflite: ^2.4.2
   #link 
   url_launcher: ^6.3.1
   #animation
   animations: ^2.0.11
   animated_text_kit: ^4.2.3
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   hive_generator: ^2.0.1
   build_runner: ^2.4.15
+  flutter_test:
+    sdk: flutter
+  
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
