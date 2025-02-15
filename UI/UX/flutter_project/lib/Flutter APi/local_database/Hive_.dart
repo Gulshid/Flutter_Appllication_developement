@@ -16,7 +16,7 @@ class _Hive_databaseState extends State<Hive_database> {
   final _myBox = Hive.box('mybox');
   //write data
   void writedata() {
-    _myBox.put(1, 'Gulshid');
+    _myBox.put(1, ['Gulshid', 22, 'Programmer']);
   }
 
   //read data
